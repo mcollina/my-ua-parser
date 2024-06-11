@@ -1,6 +1,6 @@
 {
   "name": "my-ua-parser",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "author": "Matteo Collina <hello@matteocollina.com>",
   "description": "Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data. Supports browser & node.js environment",
   "keywords": [
@@ -148,7 +148,7 @@
     "Yun Young-jin <yupmin@yupmin-office-macmini.local>",
     "Zach Bjornson <zbbjornson@gmail.com>"
   ],
-  "main": "src/ua-parser.js",
+  "main": "ua-parser.js",
   "files": [
     "ua-parser.js",
     "ua-parser.d.ts"
