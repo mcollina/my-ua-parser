@@ -1,6 +1,6 @@
 # my-ua-parser
 
-JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data with relatively small footprint (~17KB minified, ~6KB gzipped) that can be used either in browser (client-side) or node.js (server-side).
+JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data with relatively small footprint (~17KB minified, ~6KB gzipped) that can be used in node.js (server-side).
 
 # Documentation
 ### UAParser([user-agent][,extensions])

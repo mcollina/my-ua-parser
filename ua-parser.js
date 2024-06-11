@@ -1,11 +1,11 @@
 /////////////////////////////////////////////////////////////////////////////////
-/* UAParser.js v1.0.38
-   Copyright © 2012-2021 Faisal Salman <f@faisalman.com>
+/* my-ua-parser
+   Copyright © 2024 Matteo Collina <hello@matteocollina.com>
+   Copyright © 2012-2023 Faisal Salman <f@faisalman.com>
    MIT License *//*
    Detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data.
    Supports browser & node.js environment. 
-   Demo   : https://faisalman.github.io/ua-parser-js
-   Source : https://github.com/faisalman/ua-parser-js */
+   Source : https://github.com/mcollina/my-ua-parser */
 /////////////////////////////////////////////////////////////////////////////////
 
 (function (window, undefined) {
@@ -17,8 +17,7 @@
     /////////////
 
 
-    var LIBVERSION  = '1.0.38',
-        EMPTY       = '',
+    var EMPTY       = '',
         UNKNOWN     = '?',
         FUNC_TYPE   = 'function',
         UNDEF_TYPE  = 'undefined',
@@ -900,7 +899,6 @@
         return this;
     };
 
-    UAParser.VERSION = LIBVERSION;
     UAParser.BROWSER =  enumerize([NAME, VERSION, MAJOR]);
     UAParser.CPU = enumerize([ARCHITECTURE]);
     UAParser.DEVICE = enumerize([MODEL, VENDOR, TYPE, CONSOLE, MOBILE, SMARTTV, TABLET, WEARABLE, EMBEDDED]);

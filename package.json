@@ -150,13 +150,12 @@
   ],
   "main": "src/ua-parser.js",
   "files": [
-    "dist",
-    "src"
+    "ua-parser.js",
+    "ua-parser.d.ts"
   ],
   "scripts": {
-    "build": "uglifyjs src/ua-parser.js -o dist/ua-parser.min.js --comments '/^ UA/' && uglifyjs src/ua-parser.js -o dist/ua-parser.pack.js --comments '/^ UA/' --compress --mangle",
-    "test": "jshint src/ua-parser.js && mocha -R nyan test/test.js",
-    "test-ci": "jshint src/ua-parser.js && mocha -R spec test/test.js"
+    "test": "jshint ua-parser.js && mocha -R nyan test/test.js && tsd",
+    "test-ci": "jshint ua-parser.js && mocha -R spec test/test.js && tsd"
   },
   "devDependencies": {
     "@babel/parser": "7.15.8",
@@ -176,5 +175,8 @@
   "engines": {
     "node": "*"
   },
-  "bugs": "https://github.com/mcollina/my-ua-parser/issues"
+  "bugs": "https://github.com/mcollina/my-ua-parser/issues",
+  "dependencies": {
+    "tsd": "^0.31.0"
+  }
 }

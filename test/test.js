@@ -1,10 +1,9 @@
 var fs          = require('fs');
 var safe        = require('safe-regex');
 var assert      = require('assert');
-var requirejs   = require('requirejs');
 var parseJS     = require('@babel/parser').parse;
 var traverse    = require('@babel/traverse').default;
-var UAParser    = require('./../src/ua-parser');
+var UAParser    = require('../ua-parser');
 var browsers    = require('./browser-test.json');
 var cpus        = require('./cpu-test.json');
 var devices     = require('./device-test.json');
@@ -119,28 +118,12 @@ describe('User-agent length', function () {
     });
 });
 
-describe('Using Require.js', function () {
-    it('should loaded automatically', function(done) {
-        requirejs.config({
-            baseUrl : 'dist',
-            paths   : {
-                'ua-parser-js' : 'ua-parser.min'
-            }
-        });
-        requirejs(['ua-parser-js'], function(ua) {
-            var parser = new ua('Dillo/1.0');
-            assert.deepStrictEqual(parser.getBrowser().name, 'Dillo');
-            done();
-        });
-    });
-});
-
 describe('Testing regexes', function () {
 
     var regexes;
 
     before('Read main js file', function () {
-        var code = fs.readFileSync('src/ua-parser.js', 'utf8').toString();
+        var code = fs.readFileSync('./ua-parser.js', 'utf8').toString();
         var ast = parseJS(code, { sourceType: "script" });
         regexes = [];
         traverse(ast, {
