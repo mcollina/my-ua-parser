@@ -1,42 +1,6 @@
-<p align="center">
-    <img src="https://raw.githubusercontent.com/faisalman/ua-parser-js/gh-pages/images/logo.png" width="256" height="256"> 
-</p>
-
-<p align="center">
-<a href="https://travis-ci.org/faisalman/ua-parser-js"><img src="https://travis-ci.org/faisalman/ua-parser-js.svg?branch=master"></a>
-<a href="https://www.npmjs.com/package/ua-parser-js"><img src="https://img.shields.io/npm/v/ua-parser-js.svg"></a>
-<a href="https://www.npmjs.com/package/ua-parser-js"><img src="https://img.shields.io/npm/dw/ua-parser-js.svg"></a>
-<a href="https://www.jsdelivr.com/package/npm/ua-parser-js"><img src="https://data.jsdelivr.com/v1/package/npm/ua-parser-js/badge"></a>
-<a href="https://cdnjs.com/libraries/UAParser.js"><img src="https://img.shields.io/cdnjs/v/UAParser.js.svg"></a>
-</p>
-
-# UAParser.js
+# my-ua-parser
 
 JavaScript library to detect Browser, Engine, OS, CPU, and Device type/model from User-Agent data with relatively small footprint (~17KB minified, ~6KB gzipped) that can be used either in browser (client-side) or node.js (server-side).
-
-* Author    : Faisal Salman <<f@faisalman.com>>
-* Demo      : https://faisalman.github.io/ua-parser-js
-* Source    : https://github.com/faisalman/ua-parser-js
-* Documentation : 
-  * v1 : https://github.com/faisalman/ua-parser-js/tree/1.0.35#documentation
-  * v2 : https://faisalman.github.io/ua-parser-js-docs/v2
-
-***
-
-### From Our Sponsors:
-<table>
-<thead>
-</thead>
-<tbody>
-<tr>
-<td colspan="2">
-<a href="https://opencollective.com/ua-parser-js">↗ Become a sponsor</a>
-</td>
-</tr>
-</tbody>
-</table>
-
----
 
 # Documentation
 ### UAParser([user-agent][,extensions])
@@ -335,36 +299,27 @@ var myUA = 'Mozilla/5.0 MyBrowser/1.3';
 console.log(myParser.setUA(myUA).getBrowser());  // {name: "MyBrowser", version: "1.3"}
 ```
 
-# Development
-
-## Backers & Sponsors
-
-<a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/organizations.svg?avatarHeight=64"></a>
-<a href="https://opencollective.com/ua-parser-js"><img src="https://opencollective.com/ua-parser-js/individuals.svg?avatarHeight=64"></a>
-
-<a href="https://www.paypal.me/faisalman/"><img src="https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg" height="40"></a>
-
-## Contributors
-
-<a href="https://github.com/faisalman/ua-parser-js/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=faisalman/ua-parser-js" />
-</a>
-
-Made with [contributors-img](https://contrib.rocks).
-
 ## How To Contribute
 
 * Fork and clone this repository
 * Make some changes as required
 * Write unit test to showcase its functionality
 * Run the test suites to make sure it's not breaking anything `$ npm test`
-* Submit a pull request under `develop` branch
+
+## Credits
+
+This library is a fork of [ua-parser-js](http://npm.im/ua-parser-js) by Faisal Salman.
+The original library switched to a AGPL+commercial license, so this fork was created to keep the library
+under the MIT license.
+
+This fork was done at [commit](693a83de2e4cf8384f43f6a5831e58663c572580).
 
 # License
 
 MIT License
 
-Copyright (c) 2012-2021 Faisal Salman <<f@faisalman.com>>
+Copyright (c) 2024 Matteo Collina <<hello@matteocollina.com>>
+Copyright (c) 2012-2023 Faisal Salman <<f@faisalman.com>>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

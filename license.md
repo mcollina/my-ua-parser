@@ -1,5 +1,6 @@
 MIT License
 
+Copyright (c) 2024 Matteo Collina <<hello@matteocollina.com>>
 Copyright (c) 2012-2023 Faisal Salman <<f@faisalman.com>>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

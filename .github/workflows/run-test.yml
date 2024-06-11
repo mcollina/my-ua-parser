@@ -1,20 +1,41 @@
-name: ua-parser-js-run-test
+name: pr
 
-on: [push, pull_request]
+on:
+  push:
+    paths-ignore:
+      - 'docs/**'
+      - '*.md'
+  pull_request:
+    paths-ignore:
+      - 'docs/**'
+      - '*.md'
 
-permissions:
-  contents: read
-
+# This allows a subsequently queued workflow run to interrupt previous runs
+concurrency:
+  group: "${{ github.workflow }} @ ${{ github.event.pull_request.head.label || github.head_ref || github.ref }}"
+  cancel-in-progress: true
+      
 jobs:
-  run-test:
+  test:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+
     strategy:
       matrix:
-        arch: [amd64, ppc64le]
+        node-version: [18.x, 20.x, 22.x]
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-      - name: Run the test
+      - uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install
         run: |
           npm install
-          npm run test-ci
+
+      - name: Run tests
+        run: |
+          npm test-ci
+
