@@ -8,7 +8,7 @@ typeof `user-agent` "string".
 
 typeof `extensions` "array".
 
-In The Browser environment you dont need to pass the user-agent string to the function, you can just call the funtion and it should automatically get the string from the `window.navigator.userAgent`, but that is not the case in nodejs. The user-agent string must be passed in nodejs for the function to work.
+In The Browser environment you don't need to pass the user-agent string to the function, you can just call the function and it should automatically get the string from the `window.navigator.userAgent`, but that is not the case in nodejs. The user-agent string must be passed in nodejs for the function to work.
 Usually you can find the user agent in:
 `request.headers["user-agent"]`.
 
@@ -39,7 +39,7 @@ When you call UAParser without the `new` keyword, it will automatically call `ge
 ## Methods
 
 #### Methods table
-The methods are self explanatory, here's a small overview on all the available methods:
+The methods are self-explanatory, here's a small overview on all the available methods:
 *  `getResult()` - returns all function object calls, user-agent string, browser info, cpu, device, engine, os:
 `{ ua: '', browser: {}, cpu: {}, device: {}, engine: {}, os: {} }`.
 
@@ -232,12 +232,12 @@ sparc[64]
 Note: Device information is not available in the NodeJS environment.
 
 ```sh
-$ npm install ua-parser-js
+$ npm install my-ua-parser
 ```
 
 ```js
 var http = require('http');
-var parser = require('ua-parser-js');
+var parser = require('my-ua-parser');
 
 http.createServer(function (req, res) {
     // get user-agent header
@@ -248,14 +248,6 @@ http.createServer(function (req, res) {
 .listen(1337, '127.0.0.1');
 
 console.log('Server running at http://127.0.0.1:1337/');
-```
-
-## Using TypeScript
-
-```sh
-$ npm install --save @types/ua-parser-js
-# Download TS type definition from DefinitelyTyped repository:
-# https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/ua-parser-js
 ```
 
 ## Using jQuery/Zepto ($.ua)
@@ -312,7 +304,7 @@ This library is a fork of [ua-parser-js](http://npm.im/ua-parser-js) by Faisal S
 The original library switched to a AGPL+commercial license, so this fork was created to keep the library
 under the MIT license.
 
-This fork was done at [commit](693a83de2e4cf8384f43f6a5831e58663c572580).
+This fork was done at [commit](https://github.com/faisalman/ua-parser-js/commit/693a83de2e4cf8384f43f6a5831e58663c572580).
 
 # License
 
