@@ -168,13 +168,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/mcollina/my-ua-parser.git"
+    "url": "git+https://github.com/mcollina/my-ua-parser.git"
   },
   "license": "MIT",
   "engines": {
     "node": "*"
   },
   "bugs": "https://github.com/mcollina/my-ua-parser/issues",
-  "dependencies": {
-  }
+  "dependencies": {}
 }
